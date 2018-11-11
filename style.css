@@ -64,9 +64,9 @@ p {
 	font-style: italic;
 }
 
-#showcase .bg-image {
+#cover_div {
 	position: absolute;
-	background: #fff url("images/cover2.jpg");
+	background: #fff url("images/cover_light.jpg");
 	width: 100%;
 	background-attachment: fixed;
 	background-position: center;
