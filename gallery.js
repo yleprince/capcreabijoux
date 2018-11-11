@@ -43,6 +43,10 @@ const imgs = [
 	{ path:"1_1_IMG_9294.JPG", style: "normal_img"}
 ];
 
+setTimeout(function() {
+ 	document.getElementById("cover_div").style.backgroundImage = "url('images/cover.jpg')"; 
+}, 1000);
+
 imgs.map((img) => gallery.appendChild(create_gallery_item(img.path, img.style)));
 
 let heavy_imgs = imgs.map((img) => {
@@ -63,34 +67,26 @@ heavy_imgs.map((h) => {
 	}, 1000);
 });
 
+// let diversity_h = document.createElement('img');
+// diversity_h.onload = function() {
+// 	document.getElementById("diversity").src = this.src
+// }
+// setTimeout(function() {
+// 	diversity_h.src = 'images/diversity.jpg';
+// }, 100);
 
+// let flag_h = document.createElement('img');
+// flag_h.onload = function() {
+// 	document.getElementById("flag").src = this.src
+// }
+// setTimeout(function() {
+// 	flag_h.src = 'images/flag.jpg';
+// }, 100);
 
-let diversity_h = document.createElement('img');
-diversity_h.onload = function() {
-	document.getElementById("diversity").src = this.src
-}
-setTimeout(function() {
-	diversity_h.src = 'images/diversity.jpg';
-}, 100);
-
-let flag_h = document.createElement('img');
-flag_h.onload = function() {
-	document.getElementById("flag").src = this.src
-}
-setTimeout(function() {
-	flag_h.src = 'images/flag.jpg';
-}, 100);
-
-let tree_h = document.createElement('img');
-tree_h.onload = function() {
-	document.getElementById("tree").src = this.src
-}
-setTimeout(function() {
-	tree_h.src = 'images/tree.jpg';
-}, 100);
-
-
-
-setTimeout(function() {
- 	document.getElementById("cover_div").style.backgroundImage = "url('images/cover.jpg')"; 
-}, 100);
+// let tree_h = document.createElement('img');
+// tree_h.onload = function() {
+// 	document.getElementById("tree").src = this.src
+// }
+// setTimeout(function() {
+// 	tree_h.src = 'images/tree.jpg';
+// }, 100);
