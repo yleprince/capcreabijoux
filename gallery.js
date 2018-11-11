@@ -1,11 +1,12 @@
-function create_gallery_item(path, img_class) {
+function create_gallery_item(filename, img_class) {
 	const gallery_item = document.createElement("div");
 	gallery_item.classList.add("gallery-item");
 	gallery_item.classList.add(img_class);
 
 	const gallery_img = document.createElement('img');
 	gallery_img.classList.add("gallery-img");
-	gallery_img.src = path;
+	gallery_img.setAttribute("id", filename.split(".")[0]);
+	gallery_img.src = `images/gallery_light/${filename}`;
 
 	gallery_item.appendChild(gallery_img);
 	return gallery_item;
@@ -42,7 +43,22 @@ const imgs = [
 	{ path:"1_1_IMG_9294.JPG", style: "normal_img"}
 ];
 
-imgs.map((img) => {
-		gallery.appendChild(create_gallery_item(`images/gallery/${img.path}`, img.style))
-	}
+imgs.map((img) => gallery.appendChild(create_gallery_item(img.path, img.style)));
+
+let heavy_imgs = imgs.map((img) => {
+	const heavy = document.createElement('img');
+	heavy.id = `h_${img.path}`;
+	heavy.classList.add(img.style);
+	return {target: img.path, img:heavy};
+}
 );
+
+heavy_imgs.map((h) => {
+	h.img.onload = function () {
+		document.getElementById(h.target.split('.')[0]).src = this.src;
+	}
+});
+
+setTimeout(function() {
+	heavy_imgs.map(h => h.img.src = `images/gallery/${h.target}`)
+}, 50);
