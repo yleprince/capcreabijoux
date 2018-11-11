@@ -1,6 +1,3 @@
-console.log("welcome to gallery");
-
-
 function create_gallery_item(path, img_class) {
 	const gallery_item = document.createElement("div");
 	gallery_item.classList.add("gallery-item");
@@ -10,12 +7,7 @@ function create_gallery_item(path, img_class) {
 	gallery_img.classList.add("gallery-img");
 	gallery_img.src = path;
 
-	// const gallery_desc = document.createElement('div');
-	// gallery_desc.classList.add("gallery-desc");
-	// gallery_desc.innerHTML = img_desc;
-
 	gallery_item.appendChild(gallery_img);
-	// gallery_item.appendChild(gallery_desc);
 	return gallery_item;
 }
 
@@ -48,16 +40,9 @@ const imgs = [
 	{ path:"1_1_IMG_9071.JPG", style: "normal_img"},
 	{ path:"1_1_IMG_9074.JPG", style: "normal_img"},
 	{ path:"1_1_IMG_9294.JPG", style: "normal_img"}
-	// { path:"3_1_IMG_8286.JPG", style: "wide_img"},
-
-
-
-
 ];
 
 imgs.map((img) => {
 		gallery.appendChild(create_gallery_item(`images/gallery/${img.path}`, img.style))
 	}
 );
-
-

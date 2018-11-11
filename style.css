@@ -108,7 +108,6 @@ p {
 	display: block;
 }
 
-
 .normal_img {
 	grid-column: span 1;
 	grid-row: span 1;
@@ -184,7 +183,6 @@ p {
 	text-align: center;
 }
 
-
 /* Media Queries */
 @media(min-width: 500px) {
 	.grid {
@@ -217,6 +215,4 @@ p {
 	#section-b li {
 		width: 31%;
 	}
-
 }
-
