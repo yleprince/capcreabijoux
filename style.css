@@ -56,6 +56,16 @@ p {
 	text-align: center;
 }
 
+.center_img {
+	display: flex;
+}
+
+#logo_capcrea {
+	margin: auto;
+	height: 3em;
+	width: auto;
+}
+
 .cap-crea {
 	letter-spacing: -0.1em;
 	font-size: 1.3em;
