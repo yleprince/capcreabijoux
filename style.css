@@ -112,7 +112,7 @@ p {
 
 #gallery {
 	margin: auto;
-	max-width: 500px;
+	max-width: 650px;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	align-items: center;
