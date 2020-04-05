@@ -5,6 +5,7 @@ function create_gallery_item(filename, img_class) {
 
 	const gallery_img = document.createElement('img');
 	gallery_img.classList.add("gallery-img");
+	gallery_img.alt = "Cap Crea jewelry item";
 	gallery_img.setAttribute("id", filename.split(".")[0]);
 	gallery_img.src = `images/gallery_light/${filename}`;
 
